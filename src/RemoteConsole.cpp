@@ -3,7 +3,7 @@
 //    Purpose: Gives a console logging and input structure
 //
 //    Author: Richard Nash
-//    Version: 1.0.0 01/03/17 
+//    Version: 1.0.1 01/03/17 
 
 #include "RemoteConsole.h"
 
