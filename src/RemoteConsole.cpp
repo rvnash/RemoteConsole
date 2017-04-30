@@ -1,9 +1,9 @@
 //
-//    RemoteConsole.cpp
+//    RemoteConsoleExample.ino
 //    Purpose: Gives a console logging and input structure
 //
 //    Author: Richard Nash
-//    Version: 1.0.1 01/03/17 
+//    Version: 1.0.2 01/03/17 
 
 #include "RemoteConsole.h"
 

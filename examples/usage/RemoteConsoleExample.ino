@@ -3,7 +3,7 @@
 //    Purpose: Library example code
 //
 //    Author: Richard Nash
-//    Version: 1.0.1 01/03/17 
+//    Version: 1.0.2 01/03/17 
 
 // Example usage for RemoteConsole library by rvnash.
 // Follow the code from top to bottom reading the comments to learn pretty much all there is to

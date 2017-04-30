@@ -3,7 +3,7 @@
 //    Purpose: Gives a console logging and input structure
 //
 //    Author: Richard Nash
-//    Version: 1.0.1 01/03/17 
+//    Version: 1.0.2 01/03/17 
 
 // This library is intended to give way to log information to the console similar to what
 // the Serial.print family of functions gives. The additional functionality this library
