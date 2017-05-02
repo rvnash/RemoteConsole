@@ -3,7 +3,7 @@
 //    Purpose: Gives a console logging and input structure
 //
 //    Author: Richard Nash
-//    Version: 1.0.2 01/03/17 
+//    Version: 1.0.2 01/03/17
 
 // This library is intended to give way to log information to the console similar to what
 // the Serial.print family of functions gives. The additional functionality this library
@@ -29,54 +29,54 @@
 class RemoteConsole
 {
 private:
-    TCPServer server;
-    TCPClient client;
-    bool echoOnSerial1;
+  TCPServer server;
+  TCPClient client;
+  bool echoOnSerial1;
 
 public:
 // Delete the default constructor
-RemoteConsole() = delete;
+  RemoteConsole() = delete;
 
 // Constructor
 // Param: port: The TCP/IP port to listen for connections on, 23 (telnet) is the default.
 // Note: This isn't really a telnet server, as it doesn't implement the telnet protocol.
 //       It is just raw socket connection to send/recieve characters. Perhaps port 23 as
 //       the default is a bad choice because of this.
-RemoteConsole(int port=23);
+  RemoteConsole(int port = 23);
 
 // init()
 // Call from your setup() function to initiate the TCP/IP listener
-void init();
+  void init();
 
 // isTerminalConnected()
 // Returns: true if a remote terminal is connected, false otherwise
-bool isTerminalConnected();
+  bool isTerminalConnected();
 
 // remoteIP()
 // Returns: the IPAddress of the remote client if "isTerminalConnected()" is true.
 //          otherwise it returns "0.0.0.0"
-IPAddress remoteIP();
+  IPAddress remoteIP();
 
 // printf()
 // The way to log information is all with printf style logs.
 // Paramters: szFormat - the format of the information to send to the console(s)
 //            Variable Arguments - to satisfy the printf style substitution string
 // Example: rcons.printf("The temperature is %.2f\n", temp);
-void printf(const char *szFormat, ...);
+  void printf(const char *szFormat, ...);
 
 // available()
 // Returns: true if a character from the remote terminal is waiting to be read, false otherwise
-bool available(); 
+  bool available();
 
 // read()
 // Returns: the character from the remote terminal, or -1 if none available
 // Note: If you want to know if a character is available, call "available()"
-int read();
+  int read();
 
 // setEchoOnSerial()
 // Param: flag - Turn of "Serial" echoing.
 // This means that the Serial connection (USB) will participate in the
 // logging AND input the same as the TCP/IP clinet that is. Default is true.
-void setEchoOnSerial(bool flag);
+  void setEchoOnSerial(bool flag);
 
 };
